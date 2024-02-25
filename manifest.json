@@ -2,23 +2,19 @@
     "manifest_version": 3,
     "name": "Flapy Capy Checks",
     "version": "1.0",
-    "description": "Meet \"Flapy\", your personal finance bro. (who's also a capybara)"
+    "description": "Meet \"Flapy\", your personal finance bro. (who's also a capybara)",
     "permissions": ["activeTab"],
     "action": {
         "default_popup": "popup.html",
         "default_icon": {   
             "16":
-            "48":
+            "48": 
             "128":
         }
     },
 
     "background": {
-        "service_worker": "background.js"
-    },
-    "content_scripts": {
-        "matches":["*://*.amazon.com/*"],
-        "js":["content.js"]
+        "service_worker": "popup.js"
     },
     "icons":{
         "16":
