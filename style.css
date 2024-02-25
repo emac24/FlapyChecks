@@ -9,4 +9,14 @@
 
 body {
     background-color: var(--background-color);
+    height: 400px;
+    width: 400px;
+}
+
+#budgetContainer {
+    display:inline-block;
+}
+
+#totalContainer {
+    display: inline;
 }
