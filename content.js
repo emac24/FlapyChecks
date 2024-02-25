@@ -1,58 +1,52 @@
-    totalBudget;
-    remainingBudget;
-    percentageChecker;
+function FlapyCheck(totalBudget){
+    this.totalBudget = totalBudget;
+    this.remainingBudget = totalBudget;
+    this.percentageChecker = 0;
+    this.updateFlapyReaction();
+}
 
-    constructor(totalBudget){
-        this.totalBudget = totalBudget;
-        this.percentageChecker = 0;
-        this.remainingBudget = totalBudget;
-        this.updateFlapyReaction();
-    }
+function addItem(price){
+    this.remainingBudget -= price;
+    this.percentageChecker += price;
+    this.updateFlapyReaction();
 
-    
-    addItem(price){
-        this.remainingBudget -= price;
-        this.percentageChecker += price;
-        this.updateFlapyReaction();
-    }
+    return remainingBudget;
+}
 
-    getRemainingBudget(){return this.remainingBudget;}
-
-    setTotalBudget(){ this.totalBudget = totalBudget;}
-
-    getTotalBudget(){return this.totalBudget;}
-
-    updateFlapyReaction(){
-        const percentage = (this.percentageChecker / this.totalBudget) * 100;
+function determineFlapyReaction(){
+    const percentage = (this.percentageChecker / this.totalBudget) * 100;
         let reaction = " ";
 
         if(percentage == 100){
-            reaction = "nice stop";
+            reaction = "niceStop.png";
         }else if(percentage >= 150){
-            reaction = "i quit";
+            reaction = "quit.png";
         }else if(percentage >= 120){
-            reaction = "please stop";
+            reaction = "pleaseStop.png";
         }else if(percentage >= 80){
-            reaction = "angry";
+            reaction = "angry.png";
         }else if(percentage >= 60){
-            reaction = "side eye"
+            reaction = "sideEye.png"
         }else if(percentage >= 40){
-            reaction = "big sparkle";
+            reaction = "bigSpark.png";
         }else if(percentage > 20){
-            reaction = "lil sparkle";
+            reaction = "lilSpark.png";
         }else if(percentage >= 0){
-            reaction = "default";
+            reaction = "default.png";
         }else{
             console.log("Error in system, check value of percentage");
         }
 
         return reaction;
-    }
+}
 
+function changeFlapyReaction(){
+    let flapyReaction = FlapyCheck.determineFlapyReaction();
+    document.getElementById("").src = flapyReaction; //ID has not been added yet
 
-    let budgetSetBtn = document.getElementById("setBudget");
-    budgetSetBtn.onclick = 
+}
 
-    let addItemBtn = document.getElementById("addItem");
-    addItemBtn.onclick = 
+function outputBudgetDetails(){
+    document.getElementById(" ") = FlapyCheck.totalBudget + " - " FlapyCheck.remainingBudget + " left"; //ID has not been added yet
+}
 
