@@ -42,11 +42,11 @@ function determineFlapyReaction(){
 
 function changeFlapyReaction(){
     let flapyReaction = FlapyCheck.determineFlapyReaction();
-    document.getElementById("").src = flapyReaction; //ID has not been added yet
+    document.getElementById("capyMood").src = flapyReaction; //ID has not been added yet
 
 }
 
 function outputBudgetDetails(){
-    document.getElementById(" ") = FlapyCheck.totalBudget + " - " FlapyCheck.remainingBudget + " left"; //ID has not been added yet
+    document.getElementById("budgetLeftover") = FlapyCheck.totalBudget + "  " + FlapyCheck.remainingBudget + " left"; //ID has not been added yet
 }
 
