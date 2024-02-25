@@ -1,25 +1,34 @@
 class FlapyCheck{
+
     #totalBudget;
     #remainingBudget;
-    Flapy(totalBudget){
+    #percentageChecker;
+
+    function FlapyCheck(totalBudget){
         this.totalBudget = totalBudget;
-        this.remaniningBudget = 0;
+        this.percentageChecker = 0;
+        this.remainingBudget = totalBudget;
         this.updateFlapyReaction();
     }
-
-    
 
     addItem(price){
-        this.remaniningBudget += price;
+        this.#remainingBudget -= price;
+        this.#percentageChecker += price;
         this.updateFlapyReaction();
     }
 
+    getRemainingBudget(){return this.#remainingBudget;}
+
+    getTotalBudget(){return this.totalBudget;}
+
     updateFlapyReaction(){
-        const percentage = (this.remaniningBudget / this.totalBudget) * 100;
+        const percentage = (this.#percentageChecker / this.#totalBudget) * 100;
         let reaction = " ";
 
-        if(percentage >= 150){
-            reaction = "quit";
+        if(percentage == 100){
+            reaction = "nice stop";
+        }else if(percentage >= 150){
+            reaction = "i quit";
         }else if(percentage >= 120){
             reaction = "please stop";
         }else if(percentage >= 80){
@@ -29,16 +38,18 @@ class FlapyCheck{
         }else if(percentage >= 40){
             reaction = "big sparkle";
         }else if(percentage > 20){
-            reaction = "little sparkle";
+            reaction = "lil sparkle";
         }else if(percentage >= 0){
             reaction = "default";
         }else{
             console.log("Error in system, check value of percentage");
         }
+
+        return reaction;
     }
 
 
-
+    
 
 
 
