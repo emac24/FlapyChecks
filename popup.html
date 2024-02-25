@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <link rel="stylesheet" href="style.css">
+        <script src="content.js"></script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>FlapyCheck Popup</title>
@@ -10,6 +11,7 @@
     <body>
 
         <div id="budgetHeader">
+            <h1 id="setBudget">Budget: $</h1>
             <h1 id="budgetLeftover">$0 Left</h1>
             <img src="Images/Cappy-icon.png" id="capyMood" alt="Cappy-icon">
         </div>
@@ -24,7 +26,7 @@
             <div id="totalContainer">
                 <label for="totalSpent">Total Money Spent:</label>
                 <input type="text" input="numeric" id="totalSpent">
-                <button type="submit" id="addItem">Total Price Spent</button>
+                <button type="submit" id="addItem" >Total Price Spent</button>
             </div>
             <input type="reset" id="resetBudgetData" value="Reset">
         </form>

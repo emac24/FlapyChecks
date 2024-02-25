@@ -17,6 +17,17 @@ body {
 
 #budgetHeader {background-image: url('Images/cappy_bg.jpeg');}
 
+#budgetLeftover{
+    position: absolute;
+    top: 0px;
+    right: 10px;
+}
+
+#budget{
+    top: 0px;
+    left: 10px
+}
+
 #budgetContainer {
     position: absolute;
     bottom: 20%;

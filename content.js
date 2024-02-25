@@ -45,7 +45,26 @@ function changeFlapyReaction(){
     document.getElementById("capyMood").src = flapyReaction; 
 }
 
-function outputBudgetDetails(){
-    document.getElementById("budgetLeftover") = FlapyCheck.totalBudget + "  " + FlapyCheck.remainingBudget + " left"; 
+document.getElementById("budgetInfo").addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const newBudget = document.getElementById("budgetValue").value;
+
+    if (newBudget) {
+        updateBudget(newBudget);
+    }
+    
+});
+
+function updateBudget(newBudget){
+    this.totalBudget = newBudget;
+
+    const updatedBudget = document.getElementById("budget").textContent = newBudget;
+    const spent = document.getElementById("totalSpent").value;
+    const leftoverBudget = updatedBudget - spent; 
+
+    document.getElementById("budgetLeftover").textContent = '$${leftoverBudget} Left';
+    changeFlapyReaction();
 }
+
 
