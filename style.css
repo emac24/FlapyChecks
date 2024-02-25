@@ -21,3 +21,10 @@ body {
 #totalContainer {
     display: inline;
 }
+
+#capyMood{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
