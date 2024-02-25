@@ -7,9 +7,9 @@
     "action": {
         "default_popup": "popup.html",
         "default_icon": {   
-            "16":
-            "48": 
-            "128":
+            "16":"Cappy-icon16.png",
+            "48": "Cappy-icon48.png",
+            "128": "Cappy-icon128.png"
         }
     },
 
@@ -17,9 +17,9 @@
         "service_worker": "popup.js"
     },
     "icons":{
-        "16":
-        "48":
-        "128":
+        "16":"Cappy-icon16.png",
+        "48": "Cappy-icon48.png",
+        "128": "Cappy-icon128.png"
     }
 
 }
