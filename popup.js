@@ -2,7 +2,8 @@
     const budgetSetBtn = document.getElementById("setBudget");
     budgetSetBtn.onclick = new FlapyCheck();
 
-    const 
+    const addItemBtn = document.getElementById("addItem");
+    addItemBtn.onclick = 
 
 
 

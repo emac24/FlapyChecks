@@ -1,28 +1,29 @@
-class FlapyCheck{
+    totalBudget;
+    remainingBudget;
+    percentageChecker;
 
-    #totalBudget;
-    #remainingBudget;
-    #percentageChecker;
-
-    function FlapyCheck(totalBudget){
+    constructor(totalBudget){
         this.totalBudget = totalBudget;
         this.percentageChecker = 0;
         this.remainingBudget = totalBudget;
         this.updateFlapyReaction();
     }
 
+    
     addItem(price){
-        this.#remainingBudget -= price;
-        this.#percentageChecker += price;
+        this.remainingBudget -= price;
+        this.percentageChecker += price;
         this.updateFlapyReaction();
     }
 
-    getRemainingBudget(){return this.#remainingBudget;}
+    getRemainingBudget(){return this.remainingBudget;}
+
+    setTotalBudget(){ this.totalBudget = totalBudget;}
 
     getTotalBudget(){return this.totalBudget;}
 
     updateFlapyReaction(){
-        const percentage = (this.#percentageChecker / this.#totalBudget) * 100;
+        const percentage = (this.percentageChecker / this.totalBudget) * 100;
         let reaction = " ";
 
         if(percentage == 100){
@@ -49,8 +50,9 @@ class FlapyCheck{
     }
 
 
-    
+    let budgetSetBtn = document.getElementById("setBudget");
+    budgetSetBtn.onclick = 
 
+    let addItemBtn = document.getElementById("addItem");
+    addItemBtn.onclick = 
 
-
-}
