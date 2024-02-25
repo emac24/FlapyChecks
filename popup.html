@@ -16,11 +16,13 @@
 
         <form id="budgetInfo">
             <div id="budgetContainer">
-                <input type="text" inputmode="numeric" id="budgetValue" value="Insert Your Budget">
-                <button type="text" inputmode="numeric" id="setBudget">Set Budget</button>
+                <label for="budgetValue">Insert Your Budget</label>
+                <input type="text" inputmode="numeric" id="budgetValue">
+                <button type="submit" id="setBudget">Set Budget</button>
             </div>
             <div id="totalContainer">
-                <input type="number" id="totalSpent" value="Total Money Spent">
+                <label for="totalSpent">Total Money Spent</label>
+                <input type="text" input="numeric" id="totalSpent">
                 <button type="submit" id="addItem">Total Price Spent</button>
             </div>
             <input type="reset" id="resetBudgetData" value="Reset">
