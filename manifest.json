@@ -17,9 +17,9 @@
         "service_worker": "popup.js"
     },
     "icons":{
-        "16":"Cappy-icon16.png",
-        "48": "Cappy-icon48.png",
-        "128": "Cappy-icon128.png"
+        "16":"Images/Cappy-icon16.png",
+        "48": "Images/Cappy-icon48.png",
+        "128": "Images/Cappy-icon128.png"
     }
 
 }
