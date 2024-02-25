@@ -21,14 +21,12 @@ body {
     position: absolute;
     bottom: 20%;
     left: 0;
-    padding: 10px;
 }
 
 #totalContainer {
     position: absolute;
     bottom: 10%;
     left: 0;
-    padding: 10px;
 }
 
 #resetBudgetData {
